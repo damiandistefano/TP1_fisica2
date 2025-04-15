@@ -31,3 +31,5 @@ def vmult_vs_vfuente(df):
     plt.legend()
     plt.axis('equal')  # opcional, para mantener escala 1:1
     plt.show()
+
+    return m, b
