@@ -3,8 +3,11 @@ import pandas as pd
 import numpy as np
 
 def vmult_vs_vfuente(df):
-    voltaje_mult = df['V multimetro']
-    voltaje_fuente = df['V fuente']
+    voltaje_mult = df['Vmult']
+    voltaje_fuente = df['Vfuente']
+    
+    # Error de medición para voltaje_mult (±0.01V)
+    error_volt_mult = np.ones_like(voltaje_mult) * 0.01
 
     # Ajuste lineal: y = m*x + b
     m, b = np.polyfit(voltaje_mult, voltaje_fuente, 1)
@@ -14,7 +17,7 @@ def vmult_vs_vfuente(df):
     print(f"Ordenada al origen: {b:.3f}")
 
     # Graficar datos experimentales
-    plt.plot(voltaje_mult, voltaje_fuente, 'o', label='Datos')
+    plt.errorbar(voltaje_mult, voltaje_fuente, xerr=error_volt_mult, fmt='o', label='Datos')
 
     # Graficar recta ajustada
     x = np.linspace(min(voltaje_mult), max(voltaje_mult), 100)
