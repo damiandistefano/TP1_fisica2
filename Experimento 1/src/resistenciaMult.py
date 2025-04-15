@@ -8,9 +8,9 @@ def resistencia_mult(df,m,b):
     
     plt.figure(figsize=(10,6))
     plt.scatter(vM, rM, color='blue', alpha=0.6)
-    plt.xlabel('Voltage Multimeter (V)')
-    plt.ylabel('Resistance Multimeter (Ω)')
-    plt.title('Resistance vs Voltage Measurements')
+    plt.xlabel('Voltaje Multímetro (V)')
+    plt.ylabel('Resistencia Multímetro (Ω)')
+    plt.title('Mediciones de Resistencia vs Voltaje')
     plt.grid(True)
     plt.show()
     
