@@ -22,7 +22,6 @@ def graficar_ley_ohm(df1, df2, v_col, i_col):
     plt.plot(I2, pendiente2 * I2 + intercepto2, label='R = 98000 $\omega$', color='blue', linestyle='--')
     plt.xlabel("Corriente [A]")
     plt.ylabel("Voltaje [V]")
-    plt.title(f"Ley de Ohm: {v_col} vs {i_col}")
     plt.grid(True)
     plt.legend()
     plt.ylim(0, 5)

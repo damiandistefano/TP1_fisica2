@@ -10,7 +10,6 @@ def resistencia_mult(df,m,b):
     plt.scatter(vM, rM, color='blue', alpha=0.6)
     plt.xlabel('Voltaje Multímetro (V)')
     plt.ylabel('Resistencia Multímetro (Ω)')
-    plt.title('Mediciones de Resistencia vs Voltaje')
     plt.grid(True)
     plt.show()
     

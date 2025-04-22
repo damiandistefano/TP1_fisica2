@@ -26,7 +26,6 @@ def vmult_vs_vfuente(df):
 
     plt.xlabel('Voltaje multímetro (V)')
     plt.ylabel('Voltaje fuente (V)')
-    plt.title('Voltaje multímetro vs Voltaje fuente')
     plt.grid(True)
     plt.legend()
     plt.axis('equal')  # opcional, para mantener escala 1:1
