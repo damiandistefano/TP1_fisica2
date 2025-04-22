@@ -1,0 +1,163 @@
+\documentclass[11pt]{article}
+\usepackage{float}  % Esto va en el preámbulo
+\usepackage[utf8]{inputenc}
+\usepackage[spanish]{babel}
+\usepackage{graphicx}         % Para incluir imágenes
+\usepackage{amsmath}          % Para notación matemática
+\usepackage[margin=3cm]{geometry}  % Márgenes
+\usepackage[font=normalsize,labelfont=small]{caption}  % Estilo de captions
+\usepackage{hyperref}         % Para links clickeables
+
+\documentclass[12pt]{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage[spanish]{babel}
+\usepackage{graphicx}
+\usepackage{amsmath, amssymb}
+\usepackage{float}
+\usepackage{geometry}
+\geometry{a4paper, margin=2.5cm}
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    citecolor=blue,
+    urlcolor=blue
+}
+
+\begin{document}
+
+\begin{titlepage}
+    \centering
+    \vspace*{0.5cm}
+    \includegraphics[scale=1.0]{Logo-Udesa.png}\par
+    \vspace{10pt}
+
+    {\LARGE \textbf{Fisica II}\par}
+    \vspace{1cm}
+
+    {\LARGE \textbf{Trabajo Práctico 1: \\Ley de Ohm y Medición de la Resistencia Interna de un Voltimetro}\par}
+    \vspace{2cm}
+    
+    {\LARGE {Facundo Firpo, Damian  Distefano y Alejo Zimmermann}\par}
+    \vspace{4cm}
+    
+    {\Large \today\par}
+    \vspace{1cm}
+    \Large{Ingeniería en Inteligencia Artificial}
+\end{titlepage}
+
+
+\begin{abstract}
+En esta práctica de laboratorio se llevaron a cabo dos experiencias en el contexto de circuitos eléctricos en corriente continua. La primera consistió en la verificación experimental de la ley de Ohm para un resistor, evaluando la proporcionalidad entre la diferencia de potencial aplicada y la corriente. La segunda experiencia tuvo como objetivo estimar la resistencia interna de un voltímetro, utilizando su efecto en un circuito divisor de tensión.
+\end{abstract}
+
+\section*{Introducción}
+
+En esta práctica se abordarán dos experiencias. La primera busca validar la ley de Ohm, la cual establece una relación lineal entre la diferencia de potencial aplicada a un conductor y la corriente que circula por él. La segunda experiencia tiene por objetivo determinar la resistencia interna del voltímetro, utilizando un método basado en un divisor de tensión.
+
+\section*{Marco teórico}
+
+La ley de Ohm, formulada por Georg Simon Ohm en 1827, establece que la corriente eléctrica que circula por un conductor es directamente proporcional a la diferencia de potencial aplicada entre sus extremos, siempre que la temperatura y otras condiciones físicas del conductor se mantengan constantes. Matemáticamente, se expresa como:
+\begin{equation}
+V = I R
+\label{eq:ley-ohm}
+\end{equation}
+donde \( V \) es la diferencia de potencial (en voltios), \( I \) es la corriente eléctrica (en amperios) y \( R \) es la resistencia del conductor (en ohmios).
+
+Por otro lado, los instrumentos de medición, como los voltímetros y amperímetros, no son ideales. En particular, los voltímetros poseen una resistencia interna finita que puede influir en las mediciones realizadas, especialmente en circuitos con resistencias elevadas. La resistencia interna del voltímetro, \( R_V \), afecta la distribución de tensiones en un circuito divisor, lo que puede llevar a errores sistemáticos en las mediciones.
+
+El análisis de circuitos eléctricos se basa en las leyes de Kirchhoff, que permiten describir la conservación de la energía y la carga en un circuito. La primera ley de Kirchhoff, o ley de corrientes, establece que la suma de las corrientes que entran y salen de un nodo es igual a cero. La segunda ley, o ley de tensiones, establece que la suma algebraica de las diferencias de potencial en un lazo cerrado es igual a cero.
+
+En este trabajo, se aplican estos conceptos para verificar experimentalmente la ley de Ohm y para estimar la resistencia interna de un voltímetro, utilizando un circuito divisor de tensión como herramienta de análisis.
+
+
+\section*{Resumen de experiencias}
+
+\subsection*{1. Verificación de la Ley de Ohm}
+
+Se estudia la relación entre la diferencia de potencial aplicada a una resistencia y la corriente que circula por ella. De acuerdo con la ley de Ohm, se espera una relación lineal del tipo
+\[
+\Delta V = k i
+\]
+donde \( k \) es la resistencia del elemento. Se armó un circuito simple con una fuente variable, un resistor y un amperímetro para medir la corriente. Se tomaron mediciones de tensión e intensidad para distintos valores de la fuente, y se graficó \( \Delta V \) vs. \( i \) para verificar si el comportamiento es lineal.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.5\linewidth]{ej1.png}
+    \caption{Enter Caption}
+    \label{fig:enter-label}
+\end{figure}
+
+\subsection*{2. Medición de la resistencia interna del voltímetro}
+
+Se utilizó un divisor de tensión formado por una resistencia variable \( R \) y el voltímetro, cuya resistencia interna \( R_V \) se desea determinar. Usando la relación:
+\[
+V_V = \frac{R}{R + R_V} E_0
+\]
+se midió la tensión indicada por el voltímetro para distintos valores de \( R \). En el caso particular donde \( V_V = E_0 / 2 \), se cumple que \( R = R_V \). Esta condición permitió estimar experimentalmente la resistencia interna del voltímetro de forma sencilla.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.5\linewidth]{ej2.png}
+    \caption{Enter Caption}
+    \label{fig:enter-label}
+\end{figure}
+
+\section*{Mediciones}
+
+\subsection*{1. Fuente}
+
+(falta especificar la marca)% PREGUNTAR QUE FUENTE USAMOS
+
+Esta permite variar el voltaje de salida manualmente mediante perillas y visualizar su valor en una pantalla digital. Se utilizó para aplicar distintas diferencias de potencial sobre el resistor bajo estudio y también para alimentar el divisor de tensión en la segunda experiencia.
+
+\subsection*{2. Multímetro}
+
+(falta especificar la marca)% PREGUNTAR QUE MULT USAMOS
+
+El multímetro digital empleado permite realizar mediciones de voltaje, corriente y resistencia. En esta práctica, se utilizó principalmente para medir la tensión en distintos puntos del circuito, así como también para medir la corriente mediante la inserción en serie. Dado que el multímetro no es ideal y posee una resistencia interna finita, se analizó su influencia en el circuito divisor de tensión.
+
+Para obtener un mejor conocimiento del comportamiento del multímetro, se comparó el voltaje que este mide con el voltaje real entregado por la fuente. Esta comparación permite calibrar el sistema y determinar la relación entre el valor medido y el valor aplicado.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=.9\linewidth]{VvsV.png}
+    \caption{Voltaje medido por el multímetro vs voltaje suministrado por la fuente. La recta ajustada permite estimar el error sistemático del instrumento.}
+    \label{fig:vvsf}
+\end{figure}
+
+\section*{Resultados}
+
+\subsection*{1. Experiencia 1}
+
+En esta experiencia se verificó la ley de Ohm. Se midió la corriente que circulaba por el resistor y la tensión entre sus extremos para distintos valores aplicados. Luego se representaron gráficamente los datos, observando una clara relación lineal entre tensión y corriente. La pendiente de cada recta obtenida representa la resistencia del componente, y su valor fue consistente con las especificaciones del fabricante.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\linewidth]{Ohm.png}
+    \caption{Gráfico de diferencia de potencial medida vs corriente real para dos resistores distintos. Las pendientes indican los valores de resistencia obtenidos experimentalmente.}
+    \label{fig:ohm}
+\end{figure}
+
+\subsection*{2. Experiencia 2}
+
+En esta segunda experiencia se analizó el efecto del multímetro sobre un circuito divisor de tensión. Se construyó un divisor utilizando dos resistores en serie, y se midió el voltaje sobre uno de ellos con el multímetro. Como el instrumento tiene resistencia interna finita, introduce una carga en el circuito, modificando el valor de la tensión medida. A partir de esta perturbación y aplicando las leyes de circuitos, se estimó la resistencia interna del multímetro.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.9\linewidth]{Rv.png}
+    \caption{Estimación de la resistencia interna del multímetro a partir de diferentes mediciones de tensión.}
+    \label{fig:rv}
+\end{figure}
+
+\section*{Conclusiones}
+
+
+
+En la primera experiencia, se logró verificar experimentalmente la ley de Ohm. Los gráficos obtenidos mostraron una relación lineal clara entre la diferencia de potencial y la corriente, lo cual confirma la proporcionalidad establecida por dicha ley. Las pendientes de las rectas obtenidas permitieron calcular resistencias que resultaron coherentes con los valores esperados. Esta experiencia puso en evidencia la utilidad de los métodos gráficos para determinar parámetros eléctricos de manera sencilla y precisa.
+
+En la segunda experiencia, se observó cómo la resistencia interna del voltímetro influye en las mediciones de tensión en un circuito divisor. A través de un análisis teórico-experimental, se pudo estimar el valor de dicha resistencia interna, evidenciando que los instrumentos de medición no son ideales y pueden perturbar el sistema que intentan medir. Esta situación es especialmente importante cuando se trabaja con resistencias de valores elevados, ya que la carga introducida por el instrumento puede afectar significativamente el resultado.
+
+
+\end{document}
