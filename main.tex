@@ -36,7 +36,7 @@
     {\LARGE \textbf{Fisica II}\par}
     \vspace{1cm}
 
-    {\LARGE \textbf{Trabajo Práctico 1: \\Ley de Ohm y Medición de la Resistencia Interna de un Voltimetro}\par}
+    {\LARGE \textbf{Trabajo Práctico 1: \\Ley de Ohm y Medición de la Resistencia Interna de un Voltímetro}\par}
     \vspace{2cm}
     
     {\LARGE {Facundo Firpo, Damian  Distefano y Alejo Zimmermann}\par}
@@ -54,54 +54,64 @@ En esta práctica de laboratorio se llevaron a cabo dos experiencias en el conte
 
 \section*{Introducción}
 
-En esta práctica se abordarán dos experiencias. La primera busca validar la ley de Ohm, la cual establece una relación lineal entre la diferencia de potencial aplicada a un conductor y la corriente que circula por él. La segunda experiencia tiene por objetivo determinar la resistencia interna del voltímetro, utilizando un método basado en un divisor de tensión.
+En esta práctica se abordarán dos experiencias. La primera busca estudiar la relación entre el voltaje, la resistencia y la corriente en un circuito. La segunda experiencia tiene por objetivo determinar la resistencia interna de un voltímetro, utilizando un método basado en un divisor de tensión.
 
 \section*{Marco teórico}
 
-La ley de Ohm, formulada por Georg Simon Ohm en 1827, establece que la corriente eléctrica que circula por un conductor es directamente proporcional a la diferencia de potencial aplicada entre sus extremos, siempre que la temperatura y otras condiciones físicas del conductor se mantengan constantes. Matemáticamente, se expresa como:
+\subsection*{1. Ley de Ohm}
+
+La ley de Ohm, establece que la corriente eléctrica que circula por un conductor es directamente proporcional a la diferencia de potencial aplicada entre sus extremos. Matemáticamente, se expresa como:
 \begin{equation}
 V = I R
 \label{eq:ley-ohm}
 \end{equation}
 donde \( V \) es la diferencia de potencial (en voltios), \( I \) es la corriente eléctrica (en amperios) y \( R \) es la resistencia del conductor (en ohmios).
 
-Por otro lado, los instrumentos de medición, como los voltímetros y amperímetros, no son ideales. En particular, los voltímetros poseen una resistencia interna finita que puede influir en las mediciones realizadas, especialmente en circuitos con resistencias elevadas. La resistencia interna del voltímetro, \( R_V \), afecta la distribución de tensiones en un circuito divisor, lo que puede llevar a errores sistemáticos en las mediciones.
-
-El análisis de circuitos eléctricos se basa en las leyes de Kirchhoff, que permiten describir la conservación de la energía y la carga en un circuito. La primera ley de Kirchhoff, o ley de corrientes, establece que la suma de las corrientes que entran y salen de un nodo es igual a cero. La segunda ley, o ley de tensiones, establece que la suma algebraica de las diferencias de potencial en un lazo cerrado es igual a cero.
-
-En este trabajo, se aplican estos conceptos para verificar experimentalmente la ley de Ohm y para estimar la resistencia interna de un voltímetro, utilizando un circuito divisor de tensión como herramienta de análisis.
-
 
 \section*{Resumen de experiencias}
+En este trabajo, se aplicaron los conceptos del marco teórico para verificar experimentalmente la ley de Ohm y para estimar la resistencia interna de un voltímetro. Todas las mediciones fueron tomadas con multímetros utilizados como voltímetros y amperímetros.
 
 \subsection*{1. Verificación de la Ley de Ohm}
 
-Se estudia la relación entre la diferencia de potencial aplicada a una resistencia y la corriente que circula por ella. De acuerdo con la ley de Ohm, se espera una relación lineal del tipo
-\[
-\Delta V = k i
-\]
-donde \( k \) es la resistencia del elemento. Se armó un circuito simple con una fuente variable, un resistor y un amperímetro para medir la corriente. Se tomaron mediciones de tensión e intensidad para distintos valores de la fuente, y se graficó \( \Delta V \) vs. \( i \) para verificar si el comportamiento es lineal.
+Se estudia la relación entre la diferencia de potencial aplicada a una resistencia y la corriente que circula por ella. De acuerdo con la ley de Ohm, se espera una relación lineal como la de la ecuación \ref{eq:ley-ohm}. Se armó un circuito simple con una fuente variable, un resistor y un amperímetro para medir la corriente.
 
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.5\linewidth]{ej1.png}
-    \caption{Enter Caption}
-    \label{fig:enter-label}
+    \caption{Circuito armado para evaluar la Ley de Ohm donde E es el voltaje de la fuente, i es la corriente dada por la fuente, V es el voltímetro, A es el amperímetro y la X la resistencia.}
+    \label{fig:ej1}
 \end{figure}
 
+En las mediciones utilizamos dos resistencias distintas, una de $9.6k\Omega$ y otra de $98k\Omega$, para cada uno de ellas variamos el voltaje emitido por la fuente entre $0.5V$ y $5V$. Con estos datos podemos construir una regresión lineal y fijarnos si efectivamente se cumple la Ley de Ohm. 
+
+Para medir, como se puede observar en \ref{fig:ej1}, utilizamos un voltímetro en paralelo con la resistencia y un amperímetro en serie con la resistencia. El voltímetro estaba en paralelo para medir la caída de potencial al pasar por la resistencia mientras que el amperímetro en serie media la corriente. Durante las mediciones, se consideró que las mediciones de los multímetros eran más certeras que las de la fuente directa. Durante el experimento no se utilizaron a voltajes muy elevados para arruinar ningún equipamiento. 
+
 \subsection*{2. Medición de la resistencia interna del voltímetro}
+Se utilizó un divisor de tensión como visto en \ref{fig:ej2} formado por una resistencia variable \( R \) y el voltímetro, cuya resistencia interna \( R_V \) se desea determinar. Usando las relaciones:
 
-Se utilizó un divisor de tensión formado por una resistencia variable \( R \) y el voltímetro, cuya resistencia interna \( R_V \) se desea determinar. Usando la relación:
-\[
-V_V = \frac{R}{R + R_V} E_0
-\]
-se midió la tensión indicada por el voltímetro para distintos valores de \( R \). En el caso particular donde \( V_V = E_0 / 2 \), se cumple que \( R = R_V \). Esta condición permitió estimar experimentalmente la resistencia interna del voltímetro de forma sencilla.
+\begin{equation}
+    V_V = I \cdot R_V
+    \label{eq:voltimetro}
+\end{equation}
 
+\begin{equation}
+    E_0 = I \cdot (R + R_V)
+    \label{eq:fuente}
+\end{equation}
+
+se obtiene:
+
+\begin{equation}
+    R_V = \frac{R}{\frac{E_0}{V_V} - 1}
+    \label{eq:resistencia-interna}
+\end{equation}
+
+Se midió la tensión indicada por el voltímetro para distintos valores de \( R \). En el caso particular donde \( V_V = E_0 / 2 \), se cumple que \( R = R_V \). Esta condición permitió estimar experimentalmente la resistencia interna de
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.5\linewidth]{ej2.png}
     \caption{Enter Caption}
-    \label{fig:enter-label}
+    \label{fig:ej2}
 \end{figure}
 
 \section*{Mediciones}

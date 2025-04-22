@@ -17,9 +17,9 @@ def graficar_ley_ohm(df1, df2, v_col, i_col):
     # Plot
     plt.figure(figsize=(8, 5))
     plt.scatter(I1, V1, color='black')
-    plt.plot(I1, pendiente1 * I1 + intercepto1, label='R = 9600 $\omega$', color='red', linestyle='--')
+    plt.plot(I1, pendiente1 * I1 + intercepto1, label='R = 9.6 $k\Omega$', color='red', linestyle='--')
     plt.scatter(I2, V2, color='black')
-    plt.plot(I2, pendiente2 * I2 + intercepto2, label='R = 98000 $\omega$', color='blue', linestyle='--')
+    plt.plot(I2, pendiente2 * I2 + intercepto2, label='R = 98 $k\Omega$', color='blue', linestyle='--')
     plt.xlabel("Corriente [A]")
     plt.ylabel("Voltaje [V]")
     plt.grid(True)
