@@ -15,7 +15,6 @@ def graficar_ley_ohm(df1, df2, v_col, i_col):
     # Ajuste lineal
     pendiente1, intercepto1, r_value1, p_value1, std_err1 = linregress(I1, V1)
     pendiente2, intercepto2, r_value2, p_value2, std_err2 = linregress(I2, V2)
-
     # Plot
     plt.figure(figsize=(8, 5))
 
